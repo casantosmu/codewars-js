@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended"],
+  "root": true,
+  "rules": {
+    "no-console": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "object-shorthand": "error",
+    "prefer-template": "error",
+    "no-useless-concat": "error"
+  }
+}
