@@ -3,12 +3,11 @@
   "type": "module",
   "scripts": {
     "codegen": "node ./scripts/generate-readme.js && prettier ./README.md --write",
-    "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint --fix ."
+    "lint": "eslint . && prettier . --check",
+    "lint:fix": "eslint --fix . && prettier . --write"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-plugin-unicorn": "^50.0.1",
+    "@casantosmu/eslint-config": "^0.0.0",
     "prettier": "3.1.1"
   }
 }

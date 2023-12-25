@@ -11,5 +11,6 @@ export function findOdd(array) {
       odds.add(int);
     }
   }
+
   return [...odds][0];
 }

@@ -11,5 +11,6 @@ export function solution(number) {
       sum += index;
     }
   }
+
   return sum;
 }

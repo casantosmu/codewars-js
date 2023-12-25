@@ -15,9 +15,11 @@ export function findOutlier(integers) {
     } else {
       odd.push(integer);
     }
+
     if (even.length > 1 && odd.length === 1) {
       return odd[0];
     }
+
     if (odd.length > 1 && even.length === 1) {
       return even[0];
     }

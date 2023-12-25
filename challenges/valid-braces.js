@@ -15,11 +15,10 @@ export function validBraces(braces) {
   for (const brace of braces) {
     if (bracesMap[brace]) {
       stack.push(brace);
-    } else {
-      if (brace !== bracesMap[stack.pop()]) {
-        return false;
-      }
+    } else if (brace !== bracesMap[stack.pop()]) {
+      return false;
     }
   }
+
   return stack.length === 0;
 }

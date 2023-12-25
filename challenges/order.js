@@ -12,8 +12,8 @@ export function order(words) {
   const result = [];
   for (const word of words.split(" ")) {
     const number = Number([...word].find((character) => isNumeric(character)));
-
     result[number - 1] = word;
   }
+
   return result.join(" ");
 }
