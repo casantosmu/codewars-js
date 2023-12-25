@@ -10,6 +10,7 @@
     "prefer-const": "error",
     "object-shorthand": "error",
     "prefer-template": "error",
-    "no-useless-concat": "error"
+    "no-useless-concat": "error",
+    "eqeqeq": "error"
   }
 }
