@@ -10,8 +10,9 @@ Codewars challenges solved in JavaScript.
 | 4   | [Count the number of Duplicates](https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1) | [JavaScript](./challenges/duplicate-count.js) | 6 kyu      |
 | 5   | [Find the odd int](https://www.codewars.com/kata/54da5a58ea159efa38000836)               | [JavaScript](./challenges/find-odd.js)        | 6 kyu      |
 | 6   | [Find The Parity Outlier](https://www.codewars.com/kata/5526fc09a1bbd946250002dc)        | [JavaScript](./challenges/find-outliner.js)   | 6 kyu      |
-| 7   | [Who likes it?](https://www.codewars.com/kata/5266876b8f4bf2da9b000362)                  | [JavaScript](./challenges/likes.js)           | 6 kyu      |
-| 8   | [Multiples of 3 or 5](https://www.codewars.com/kata/514b92a657cdc65150000006)            | [JavaScript](./challenges/multiples-of.js)    | 6 kyu      |
-| 9   | [Your order, please](https://www.codewars.com/kata/55c45be3b2079eccff00010f)             | [JavaScript](./challenges/order.js)           | 6 kyu      |
-| 10  | [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)        | [JavaScript](./challenges/spin-words.js)      | 6 kyu      |
-| 11  | [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)                   | [JavaScript](./challenges/valid-braces.js)    | 6 kyu      |
+| 7   | [Human Readable Time](https://www.codewars.com/kata/52685f7382004e774f0001f7)            | [JavaScript](./challenges/human-readable.js)  | 5 kyu      |
+| 8   | [Who likes it?](https://www.codewars.com/kata/5266876b8f4bf2da9b000362)                  | [JavaScript](./challenges/likes.js)           | 6 kyu      |
+| 9   | [Multiples of 3 or 5](https://www.codewars.com/kata/514b92a657cdc65150000006)            | [JavaScript](./challenges/multiples-of.js)    | 6 kyu      |
+| 10  | [Your order, please](https://www.codewars.com/kata/55c45be3b2079eccff00010f)             | [JavaScript](./challenges/order.js)           | 6 kyu      |
+| 11  | [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)        | [JavaScript](./challenges/spin-words.js)      | 6 kyu      |
+| 12  | [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)                   | [JavaScript](./challenges/valid-braces.js)    | 6 kyu      |
