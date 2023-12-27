@@ -46,13 +46,17 @@ ${table}
 `;
 };
 
-const data = await Promise.all(
-  readdirSync(challengesDirectory).map((filename) =>
-    getDataFromFilename(filename),
-  ),
+const filenames = readdirSync(challengesDirectory);
+
+const unsortedData = await Promise.all(
+  filenames.map((filename) => getDataFromFilename(filename)),
 );
 
-const readmeContent = generateReadmeContent(data);
+const sortedData = unsortedData.sort((a, b) =>
+  a.difficulty < b.difficulty ? -1 : 1,
+);
+
+const readmeContent = generateReadmeContent(sortedData);
 
 writeFileSync(readmeFile, readmeContent, "utf8");
 
