@@ -15,5 +15,6 @@ Codewars challenges solved in JavaScript.
 | 9   | [Moving Zeros To The End](https://www.codewars.com/kata/52597aa56021e91c93000cb0)        | [JavaScript](./challenges/move-zeros.js)      | 5 kyu      |
 | 10  | [Multiples of 3 or 5](https://www.codewars.com/kata/514b92a657cdc65150000006)            | [JavaScript](./challenges/multiples-of.js)    | 6 kyu      |
 | 11  | [Your order, please](https://www.codewars.com/kata/55c45be3b2079eccff00010f)             | [JavaScript](./challenges/order.js)           | 6 kyu      |
-| 12  | [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)        | [JavaScript](./challenges/spin-words.js)      | 6 kyu      |
-| 13  | [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)                   | [JavaScript](./challenges/valid-braces.js)    | 6 kyu      |
+| 12  | [Simple Pig Latin](https://www.codewars.com/kata/520b9d2ad5c005041100000f)               | [JavaScript](./challenges/pig-it.js)          | 5 kyu      |
+| 13  | [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)        | [JavaScript](./challenges/spin-words.js)      | 6 kyu      |
+| 14  | [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56)                   | [JavaScript](./challenges/valid-braces.js)    | 6 kyu      |
