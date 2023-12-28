@@ -1,25 +1,29 @@
-/* eslint-disable no-console */
 import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
-import { readFile } from "node:fs/promises";
-import { readdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import fs from "node:fs/promises";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const rootDirectory = join(__dirname, "..");
-const challengesDirectory = join(rootDirectory, "challenges");
-const readmeFile = join(rootDirectory, "README.md");
+const rootPath = path.join(__dirname, "..");
+const challengesPath = path.join(rootPath, "challenges");
 
-const getDataFromFilename = async (filename) => {
-  const filePath = join(challengesDirectory, filename);
-  const content = await readFile(filePath, "utf8");
+const getChallengeData = async (filename) => {
+  const filePath = path.join(challengesPath, filename);
+  const content = await fs.readFile(filePath, "utf8");
   const description = content.match(/\/\*(.*)\*\//s)[1];
   const title = description.match(/Title: (.*)/)[1];
   const url = description.match(/URL: (.*)/)[1];
   const difficulty = description.match(/Difficulty: (.*)/)[1];
 
   return { title, url, difficulty, filename };
+};
+
+const getChallengesData = async () => {
+  const filenames = await fs.readdir(challengesPath);
+  const unsortedData = await Promise.all(
+    filenames.map((filename) => getChallengeData(filename)),
+  );
+  return unsortedData.sort((a, b) => (a.difficulty < b.difficulty ? -1 : 1));
 };
 
 const generateMarkdownTable = (data) => {
@@ -34,30 +38,19 @@ const generateMarkdownTable = (data) => {
   return table;
 };
 
-const generateReadmeContent = (data) => {
-  const table = generateMarkdownTable(data);
-
-  return `
+const generateReadmeContent = (table) => `
 # Codewars
 
 Codewars challenges solved in JavaScript.
 
 ${table}
 `;
-};
 
-const filenames = readdirSync(challengesDirectory);
+const data = await getChallengesData();
+const markdownTable = generateMarkdownTable(data);
+const readmeContent = generateReadmeContent(markdownTable);
+const readmePath = path.join(rootPath, "README.md");
 
-const unsortedData = await Promise.all(
-  filenames.map((filename) => getDataFromFilename(filename)),
-);
-
-const sortedData = unsortedData.sort((a, b) =>
-  a.difficulty < b.difficulty ? -1 : 1,
-);
-
-const readmeContent = generateReadmeContent(sortedData);
-
-writeFileSync(readmeFile, readmeContent, "utf8");
+await fs.writeFile(readmePath, readmeContent, "utf8");
 
 console.log("README generated successfully");

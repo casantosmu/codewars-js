@@ -8,7 +8,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {
-    "no-console": "error"
-  }
+  "overrides": [
+    {
+      "files": ["challenges/**/*.js"],
+      "rules": {
+        "no-console": ["error"]
+      }
+    }
+  ]
 }
