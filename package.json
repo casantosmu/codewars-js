@@ -2,7 +2,8 @@
   "name": "codewars-js",
   "type": "module",
   "scripts": {
-    "codegen": "node ./scripts/generate-readme.js && prettier ./README.md --write",
+    "generate-readme": "node scripts/generate-readme.js && prettier README.md --write",
+    "generate-challenge": "node scripts/generate-challenge.js && npm run generate-readme",
     "lint": "eslint . && prettier . --check",
     "lint:fix": "eslint --fix . && prettier . --write"
   },
