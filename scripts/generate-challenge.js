@@ -1,12 +1,9 @@
-import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs/promises";
 import readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const rootPath = path.join(__dirname, "..");
+const rootPath = path.join(import.meta.dirname, "..");
 const challengesPath = path.join(rootPath, "challenges");
 
 const camelCaseToKebabCase = (string) =>

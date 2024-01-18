@@ -1,6 +1,9 @@
 {
   "name": "codewars-js",
   "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
   "scripts": {
     "generate-readme": "node scripts/generate-readme.js && prettier README.md --write",
     "generate-challenge": "node scripts/generate-challenge.js && npm run generate-readme",

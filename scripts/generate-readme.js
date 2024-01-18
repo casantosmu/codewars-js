@@ -1,10 +1,7 @@
-import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs/promises";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const rootPath = path.join(__dirname, "..");
+const rootPath = path.join(import.meta.dirname, "..");
 const challengesPath = path.join(rootPath, "challenges");
 
 const getChallengeData = async (filename) => {
